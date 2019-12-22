@@ -1,0 +1,34 @@
+ion-button {
+  height: 54px;
+  font-size: 18px;
+  font-family: "Exo 2";
+  font-weight: 700;
+  text-transform: none;
+}
+
+.btn-link {
+  font-size: 18px;
+  font-family: "Exo 2";
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ion-color-white);
+  margin: 10px;
+  display: inline-block;
+}
+
+h1,
+h2 {
+  font-family: 'Oswald';
+}
+
+.auth-page {
+  --color: var(--ion-color-white);
+  
+  h1 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}

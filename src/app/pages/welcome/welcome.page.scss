@@ -1,0 +1,22 @@
+ion-content {
+  --background: url('/assets/img/bg-1.jpg') no-repeat center/cover;
+  --color: var(--ion-color-white);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.page-content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.page-bottom {
+  text-align: center;
+}
+
+.logo {
+  width: 255px;
+  margin: 0 auto 50px;
+}
