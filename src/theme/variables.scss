@@ -1,8 +1,12 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,700|Montserrat:300,400|Oswald:300,400&display=swap');
+
 /** Ionic CSS Variables **/
 :root {
+  --ion-font-family: "Montserrat";
+  
   // /** primary **/
   // --ion-color-primary: #3880ff;
   // --ion-color-primary-rgb: 56, 128, 255;
