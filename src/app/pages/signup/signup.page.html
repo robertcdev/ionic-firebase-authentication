@@ -26,6 +26,10 @@
       <ion-button type="submit" expand="block" shape="round">Create My Account</ion-button>
       <a routerLink="/login" class="btn-link">Log in to my account</a>
     </div>
+    <div class="messaging ion-padding" *ngIf="errorMessage != '' || successMessage != ''">
+      <ion-label color="primary">{{ errorMessage }}</ion-label>
+      <ion-label color="success">{{ successMessage }}</ion-label>
+    </div>
   </form>
   <hr class="divider" />
   <div class="social-buttons">

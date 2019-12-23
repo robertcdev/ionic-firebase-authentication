@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +14,8 @@ export class SignupPage implements OnInit {
   successMessage: string = '';
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -33,7 +35,18 @@ export class SignupPage implements OnInit {
   }
 
   tryRegister(value) {
-    // 
+    this.authService.doRegister(value).then(
+      res => {
+        console.log(res);
+        this.errorMessage = '';
+        this.successMessage = 'Your account has been created. Please log in.';
+      },
+      err => {
+        console.log(err);
+        this.errorMessage = err.message;
+        this.successMessage = '';
+      }
+    );
   }
 
   tryFacebookLogin() {
