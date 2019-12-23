@@ -5,7 +5,6 @@ ion-button {
   font-weight: 700;
   text-transform: none;
 }
-
 .btn-link {
   font-size: 18px;
   font-family: "Exo 2";
@@ -22,13 +21,67 @@ h2 {
 }
 
 .auth-page {
+  --background: url('/assets/img/bg-1.jpg') no-repeat center/cover;
   --color: var(--ion-color-white);
   
-  h1 {
+  .logo {
+    width: 127px;
+    margin: 10px auto 50px;
+  }
+  .page-title {
     font-size: 36px;
     font-weight: 300;
-    line-height: 48px;
-    margin-top: 50px;
+    text-align: center;
     margin-bottom: 20px;
+  }
+  ion-list {
+    background: var(--ion-color-transparent);
+  }
+  .checkbox-item {
+    margin-top: 8px;
+    .checkbox-container {
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--ion-color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+      border-radius: 50%;
+    }
+    ion-checkbox {
+      --background: var(--ion-color-transparent);
+      --background-checked: var(--ion-color-white);
+      --border-color: var(--ion-color-transparent);
+      --border-color-checked: var(--ion-color-white);
+      --checkmark-color: var(--ion-color-white);
+      --border-radius: 50%;
+      --size: 14px;
+      margin: 0;
+    }
+    ion-label {
+      font-size: 14px;
+    }
+  }
+  .form-actions {
+    text-align: center;
+  }
+  .divider {
+    height: 3px;
+    background-color: var(--ion-color-primary);;
+    max-width: 188px;
+    margin: 50px auto;
+  }
+  .social-buttons {
+    margin-bottom: 50px;
+    ion-button {
+      margin-bottom: 15px;
+    }
+  }
+  .policy {
+    font-size: 14px;
+    a {
+      text-decoration: underline;
+    }
   }
 }
