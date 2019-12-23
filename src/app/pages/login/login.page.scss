@@ -1,0 +1,11 @@
+ion-content {
+  --background: url('/assets/img/bg-3.jpg') no-repeat center/cover;
+}
+
+.links {
+  margin-top: 10px;
+  a {
+    color: var(--ion-color-white);
+    text-decoration: none;
+  }
+}

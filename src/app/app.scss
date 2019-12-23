@@ -20,6 +20,12 @@ h2 {
   font-family: 'Oswald';
 }
 
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
 .auth-page {
   --background: url('/assets/img/bg-1.jpg') no-repeat center/cover;
   --color: var(--ion-color-white);

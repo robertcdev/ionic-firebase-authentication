@@ -1,9 +1,69 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="auth-page ion-padding">
+  <ion-img src="/assets/img/logo.png" class="logo"></ion-img>
+  <h1 class="page-title">Log In</h1>
+  <form [formGroup]="validations_form" (ngSubmit)="tryRegister(validations_form.value)">
+    <ion-list>
+      <ion-item color="transparent">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.email">
+          <div class="error-message" *ngIf="
+            validations_form.get('email').hasError(validation.type) && 
+            (validations_form.get('email').dirty || validations_form.get('email').touched)
+          ">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
 
-<ion-content>
+      <ion-item color="transparent">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div class="error-message" *ngIf="
+            validations_form.get('password').hasError(validation.type) && 
+            (validations_form.get('password').dirty || validations_form.get('password').touched)
+          ">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
 
+      <ion-item class="checkbox-item" color="transparent" lines="none">
+        <div class="checkbox-container">
+          <ion-checkbox checked></ion-checkbox>
+        </div>
+        <ion-label>Remember me</ion-label>
+      </ion-item>
+    </ion-list>
+    <div class="form-actions">
+      <ion-button type="submit" expand="block" shape="round">Log In</ion-button>
+      <div class="links clearfix">
+        <a routerLink="/forgot-password" class="ion-float-left">Forgot Password?</a>
+        <a routerLink="/signup" class="ion-float-right">Sign Up</a>
+      </div>
+    </div>
+    <div class="messaging ion-padding" *ngIf="errorMessage != ''">
+      <label class="error-message">{{ errorMessage }}</label>
+    </div>
+  </form>
+  <hr class="divider" />
+  <div class="social-buttons">
+    <ion-button (click)="tryGoogleLogin()" color="google" expand="block">
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      Log In with Google
+    </ion-button>
+    <ion-button (click)="tryFacebookLogin()" color="facebook" expand="block">
+      <ion-icon name="logo-facebook" slot="start"></ion-icon>
+      Log In with Facebook
+    </ion-button>
+    <ion-button (click)="tryTwitterLogin()" color="twitter" expand="block">
+      <ion-icon name="logo-twitter" slot="start"></ion-icon>
+      Log In with Twitter
+    </ion-button>
+  </div>
 </ion-content>
