@@ -7,14 +7,47 @@
         <ion-label position="floating">Full Name</ion-label>
         <ion-input type="text" formControlName="name"></ion-input>
       </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.name">
+          <div class="error-message" *ngIf="
+            validations_form.get('name').hasError(validation.type) && 
+            (validations_form.get('name').dirty || validations_form.get('name').touched)
+          ">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
       <ion-item color="transparent">
         <ion-label position="floating">Email Address</ion-label>
         <ion-input type="email" formControlName="email"></ion-input>
       </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.email">
+          <div class="error-message" *ngIf="
+            validations_form.get('email').hasError(validation.type) && 
+            (validations_form.get('email').dirty || validations_form.get('email').touched)
+          ">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
       <ion-item color="transparent">
         <ion-label position="floating">Choose Password</ion-label>
         <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div class="error-message" *ngIf="
+            validations_form.get('password').hasError(validation.type) && 
+            (validations_form.get('password').dirty || validations_form.get('password').touched)
+          ">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
       <ion-item class="checkbox-item" color="transparent" lines="none">
         <div class="checkbox-container">
           <ion-checkbox></ion-checkbox>
@@ -27,8 +60,8 @@
       <a routerLink="/login" class="btn-link">Log in to my account</a>
     </div>
     <div class="messaging ion-padding" *ngIf="errorMessage != '' || successMessage != ''">
-      <ion-label color="primary">{{ errorMessage }}</ion-label>
-      <ion-label color="success">{{ successMessage }}</ion-label>
+      <label class="error-message">{{ errorMessage }}</label>
+      <label class="success-message">{{ successMessage }}</label>
     </div>
   </form>
   <hr class="divider" />

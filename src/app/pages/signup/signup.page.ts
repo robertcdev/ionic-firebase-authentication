@@ -13,6 +13,20 @@ export class SignupPage implements OnInit {
   errorMessage: string = '';
   successMessage: string = '';
 
+  validation_messages = {
+    'name': [
+      { type: 'required', message: 'Name is required.' }
+    ],
+    'email': [
+      { type: 'required', message: 'Email is required.' },
+      { type: 'pattern', message: 'Enter a valid email.' }
+    ],
+    'password': [
+      { type: 'required', message: 'Password is required.' },
+      { type: 'minlength', message: 'Password must be at least 5 characters long.' }
+    ]
+  };
+
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService
