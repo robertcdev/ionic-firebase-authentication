@@ -1,7 +1,7 @@
 <ion-content class="auth-page ion-padding">
   <ion-img src="/assets/img/logo.png" class="logo"></ion-img>
   <h1 class="page-title">Log In</h1>
-  <form [formGroup]="validations_form" (ngSubmit)="tryRegister(validations_form.value)">
+  <form [formGroup]="validations_form" (ngSubmit)="tryLogin(validations_form.value)">
     <ion-list>
       <ion-item color="transparent">
         <ion-label position="floating">Email</ion-label>

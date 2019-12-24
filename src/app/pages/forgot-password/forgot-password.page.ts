@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { AuthService } from '../../services/auth.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forgot-password',
@@ -25,9 +23,7 @@ export class ForgotPasswordPage implements OnInit {
   };
 
   constructor(
-    private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private router: Router
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
@@ -43,8 +39,8 @@ export class ForgotPasswordPage implements OnInit {
     });
   }
 
-  tryResetPassword() {
-    // 
+  tryResetPassword(value) {
+    console.log(value);
   }
 
 }
