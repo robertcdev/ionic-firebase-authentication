@@ -7,6 +7,9 @@
 :root {
   --ion-font-family: "Montserrat";
   
+  --ion-text-color: #222222;
+  --ion-text-color-rgb: 34, 34, 34;
+  
   // /** primary **/
   // --ion-color-primary: #3880ff;
   // --ion-color-primary-rgb: 56, 128, 255;
@@ -131,6 +134,9 @@
   --ion-color-transparent: transparent;
   --ion-color-transparent-contrast: #ffffff;
   --ion-color-transparent-contrast-rgb: 255, 255, 255;
+
+  /** background **/
+  --ion-color-background: #fafafa;
 }
 
 .ion-color-basic {
