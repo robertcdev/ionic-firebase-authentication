@@ -1,0 +1,25 @@
+.section {
+  background-color: var(--ion-color-white);
+  border-top: 1px solid var(--ion-color-border);
+  border-bottom: 1px solid var(--ion-color-border);
+  padding: 16px 0;
+  margin: 24px 0;
+  ion-title {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  ion-item:last-child {
+    --border-width: 0;
+  }
+  ion-label {
+    font-size: 14px;
+    color: #575859;
+  }
+  ion-input {
+    text-align: right;
+  }
+}
+ion-button {
+  height: 48px;
+  margin-bottom: 24px;
+}
