@@ -20,8 +20,10 @@ ion-button {
 }
 
 h1,
-h2 {
+h2,
+ion-title {
   font-family: 'Oswald';
+  font-size: 24px;
 }
 
 .clearfix:after {
