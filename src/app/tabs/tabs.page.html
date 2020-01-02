@@ -1,28 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>{{ page_title }}</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar>
+  <ion-title>{{ page_title }}</ion-title>
+</ion-toolbar>
+
 <ion-content>
   <ion-tabs (ionTabsDidChange)="setTitle()">
 
-    <ion-tab-bar slot="top">
-      <ion-tab-button tab="home">
-        <ion-icon name="calendar"></ion-icon>
-      </ion-tab-button>
-  
-      <ion-tab-button tab="shopping-list">
-        <ion-icon name="list"></ion-icon>
-      </ion-tab-button>
-  
-      <ion-tab-button tab="recipes">
-        <ion-icon name="apps"></ion-icon>
-      </ion-tab-button>
-  
-      <ion-tab-button tab="profile">
-        <ion-icon name="person"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
+    <ion-header>
+      <ion-tab-bar slot="top">
+        <ion-tab-button tab="home">
+          <ion-icon name="calendar"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="shopping-list">
+          <ion-icon name="list"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="recipes">
+          <ion-icon name="apps"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="profile">
+          <ion-icon name="person"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-header>
   
   </ion-tabs>
 </ion-content>
